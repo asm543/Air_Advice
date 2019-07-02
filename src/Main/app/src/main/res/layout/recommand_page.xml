@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back3"
+    android:padding="5dp"
+    android:layout_height="match_parent"
+    tools:context=".RecommandActivity">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backspace1"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="45dp"
+        android:textColor="#FCFCFC"
+        android:text="추천 정보" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/mask1" />
+            <!-- https://smartstore.naver.com/unldmall/products/4134876947?n_media=11068&n_query=%EB%A7%88%EC%8A%A4%ED%81%AC%EC%B6%94%EC%B2%9C&n_rank=1&n_ad_group=grp-a001-02-000000009658386&n_ad=nad-a001-02-000000053318492&n_campaign_type=2&n_mall_pid=4134876947&NaPm=ct%3Djw5tqmuw%7Cci%3D0yq0000NlcHqjGujnL1v%7Ctr%3Dpla%7Chk%3D0f2ea4095bcea95461179098d0baf5cf7325a29d
+            -->
+
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:textColor="#FCFCFC"/>
+            <!-- android:text="제품명 : 하이가드 황사마스크 KF94식약청 허가,4층 구조 초정전 필터, 김서림 방지, 편안한 착용감 <사진을 누르면 구매처로 이동합니다>" /> !-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton10"
+                android:layout_width="158dp"
+                android:layout_height="144dp"
+                app:srcCompat="@drawable/mask2" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#FCFCFC"/>
+            <!--   android:text="제품명: 더조은 닥터로드 황사 마스크
+ 뛰어난 밀착성, 피부자극 테스트 완료,  편안한 착용감
+<사진을 누르면 구매처로 이동합니다>"/> !-->
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+
+            android:text="미세먼지 생활요령"
+            />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. 외출 자제하기(야외모임,캠프,스포츠 등) 실 외 활동 최소화
+2. 외출시 보건 마스크(식약처 인증제품) 착용하기
+3. 대기오염이 심한 지역을 피하고, 활동량 줄이기( ex: 도로변, 공사장, 호흡이 증가되는 운동X)
+4. 외출 후 깨끗하게 씻기( 흐르는 물)
+5. 노페물 배출을 위해 물을 자주 섭취하기
+6. 항산화 효과에 좋은 과일, 야채 많이 섭취하기
+7. 실내 공기청정기 가동, 적절한 환기 실시
+8. 얼굴과 몸을 가려주는 긴팔, 긴바지를 착용하기( ex : 안경,바람막이)"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity" android:layout_height="match_parent" android:orientation="vertical" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+
+            <LinearLayout
+                android:id="@+id/backgroundUp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@drawable/background_firstgood"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btn_home_set"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/setting" />
+
+                    <LinearLayout
+                        android:layout_width="260dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtUpdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="현재 시간은..."
+                            android:textColor="#FCFCFC"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/btn_home_map"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/map" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btnMainCloud"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+
+
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/cloud1"
+                        android:text="Button" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="현재 위치는..."
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtMainStatus"
+                            android:layout_width="248dp"
+                            android:layout_height="91dp"
+                            android:gravity="center|left"
+                            android:paddingLeft="20dp"
+                            android:text="현재상태는"
+                            android:textColor="#ffffff"
+                            android:textSize="45dp"
+                            android:letterSpacing="-0.07"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtNowStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="45sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="180dp"
+                        android:layout_height="125dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/box1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="5dp"
+                            android:text="미세먼지(PM10)"
+                            android:textColor="#2B2B2B"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtMainStatusPm10"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center|top"
+                            android:gravity="clip_horizontal|center"
+                            android:letterSpacing="-0.1"
+                            android:text="-"
+                            android:textScaleX="1.1"
+                            android:textSize="50dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:text="㎍/㎥"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="180dp"
+                        android:layout_height="125dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="48dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/box1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtMainStatusPm251"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="5dp"
+                            android:text="초미세먼지(PM2.5)"
+                            android:textColor="#2B2B2B"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtMainStatusPm25"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center|center_horizontal"
+                            android:letterSpacing="-0.1"
+                            android:text="-"
+                            android:textScaleX="1.1"
+                            android:textSize="50dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:text="㎍/㎥"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/box2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtMainStatusSo2"
+                        android:layout_width="82dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="0dp"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="아황산가스 수치"
+                        android:textColor="#2B2B2B"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtMainStatusCo"
+                        android:layout_width="82dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="0dp"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="일산화탄소 수치"
+                        android:textColor="#2B2B2B"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtMainStatusO3"
+                        android:layout_width="82dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="0dp"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="오존 수치"
+                        android:textColor="#2B2B2B"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtMainStatusNo2"
+                        android:layout_width="82dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="0dp"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="이산화질소 수치"
+                        android:textColor="#2B2B2B"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="134dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton4"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/cloud1" />
+
+                    <TextView
+                        android:id="@+id/txtComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/box3"
+                        android:gravity="center"
+                        android:text="어쩌고저쩌고!!"
+                        android:textColor="#000"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/box4" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/backgroundDown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@drawable/background_firstgood2"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="360dp"
+                    android:layout_gravity="center"
+                    android:layout_height="150dp"
+                    android:background="@drawable/mask1" />
+
+                <TextView
+                    android:id="@+id/txtGrid2"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/box4" />
+
+                <TextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+
+                    android:gravity="center|center_vertical"
+                    android:text="현재 상태 : status"
+
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
