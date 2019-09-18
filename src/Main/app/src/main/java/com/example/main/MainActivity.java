@@ -1,4 +1,4 @@
-package com.example.main;
+﻿package com.example.main;
 
 import android.Manifest;
 import android.content.Context;
@@ -25,6 +25,10 @@ import java.util.List;
 import java.util.Random;
 
 public class MainActivity extends FontActivity{
+	
+    //URL에 자주 들어가는 KEY 값을 상수화하여 사용하도록 하였다.
+
+    static final String MYKEY = "IPbBi9DbtpkIHLLYxiEdNhiPoe%2B2ZzZWPHoag%2FeAOimpSX%2FCAZW4%2FU8CmowZTEuFFzgXP3%2FRAuH%2FZYJQ2fQgxQ%3D%3D";
 
     private LocationManager locationManager;
     private ImageButton btnMainCloud;
@@ -178,7 +182,7 @@ public class MainActivity extends FontActivity{
 
         try{
             int count = 0;
-            URL url2 = new URL("http://openapi.airkorea.or.kr/openapi/services/rest/MsrstnInfoInqireSvc/getNearbyMsrstnList?serviceKey=IPbBi9DbtpkIHLLYxiEdNhiPoe%2B2ZzZWPHoag%2FeAOimpSX%2FCAZW4%2FU8CmowZTEuFFzgXP3%2FRAuH%2FZYJQ2fQgxQ%3D%3D&tmX="+posX+"&tmY="+posY);
+            URL url2 = new URL("http://openapi.airkorea.or.kr/openapi/services/rest/MsrstnInfoInqireSvc/getNearbyMsrstnList?serviceKey=" + MYKEY +"&tmX="+posX+"&tmY="+posY);
             XmlPullParserFactory parserCreator = XmlPullParserFactory.newInstance();
             XmlPullParser parser = parserCreator.newPullParser();
 
@@ -303,7 +307,7 @@ public class MainActivity extends FontActivity{
 
     private void Parse_StationNameToAdress(){
         try{
-            URL url2 = new URL("http://openapi.airkorea.or.kr/openapi/services/rest/MsrstnInfoInqireSvc/getMsrstnList?serviceKey=IPbBi9DbtpkIHLLYxiEdNhiPoe%2B2ZzZWPHoag%2FeAOimpSX%2FCAZW4%2FU8CmowZTEuFFzgXP3%2FRAuH%2FZYJQ2fQgxQ%3D%3D&numOfRows=1&pageNo=1&stationName="+stationName);
+            URL url2 = new URL("http://openapi.airkorea.or.kr/openapi/services/rest/MsrstnInfoInqireSvc/getMsrstnList?serviceKey=" + MYKEY +"&numOfRows=1&pageNo=1&stationName="+stationName);
             XmlPullParserFactory parserCreator = XmlPullParserFactory.newInstance();
             XmlPullParser parser = parserCreator.newPullParser();
 
@@ -392,7 +396,7 @@ public class MainActivity extends FontActivity{
 
     private void Parse_Data(){
         try {
-            URL url = new URL("http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?serviceKey=IPbBi9DbtpkIHLLYxiEdNhiPoe%2B2ZzZWPHoag%2FeAOimpSX%2FCAZW4%2FU8CmowZTEuFFzgXP3%2FRAuH%2FZYJQ2fQgxQ%3D%3D&numOfRows=1&pageNo=1&stationName="+stationName+"&dataTerm=DAILY&ver=1.3"
+            URL url = new URL("http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?serviceKey=" + MYKEY + "&numOfRows=1&pageNo=1&stationName="+stationName+"&dataTerm=DAILY&ver=1.3"
             );
             XmlPullParserFactory parserCreator = XmlPullParserFactory.newInstance();
             XmlPullParser parser = parserCreator.newPullParser();

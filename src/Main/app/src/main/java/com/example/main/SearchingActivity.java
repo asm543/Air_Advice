@@ -17,6 +17,9 @@ import java.util.ArrayList;
 
 public class SearchingActivity extends FontActivity {
 
+    static final String MYKEY = "IPbBi9DbtpkIHLLYxiEdNhiPoe%2B2ZzZWPHoag%2FeAOimpSX%2FCAZW4%2FU8CmowZTEuFFzgXP3%2FRAuH%2FZYJQ2fQgxQ%3D%3D";
+
+
     ListView listview;
     String sidoName=null,sggName=null,umdName=null,tmX=null,tmY=null;
     boolean insidoName = false,insggName = false,inumdName = false,intmX = false,intmY = false;
@@ -51,8 +54,7 @@ public class SearchingActivity extends FontActivity {
 
     private void Parse_station(){
         try{
-            URL url2 = new URL("http://openapi.airkorea.or.kr/openapi/services/rest/MsrstnInfoInqireSvc/getTMStdrCrdnt?serviceKey=" +
-                    "IPbBi9DbtpkIHLLYxiEdNhiPoe%2B2ZzZWPHoag%2FeAOimpSX%2FCAZW4%2FU8CmowZTEuFFzgXP3%2FRAuH%2FZYJQ2fQgxQ%3D%3D&numOfRows=6000&pageNo=1&umdName="+SearchingKeyword);
+            URL url2 = new URL("http://openapi.airkorea.or.kr/openapi/services/rest/MsrstnInfoInqireSvc/getTMStdrCrdnt?serviceKey=" + MYKEY + "&numOfRows=6000&pageNo=1&umdName="+SearchingKeyword);
             XmlPullParserFactory parserCreator = XmlPullParserFactory.newInstance();
             XmlPullParser parser = parserCreator.newPullParser();
 
@@ -155,8 +157,18 @@ public class SearchingActivity extends FontActivity {
 
             {
                 Intent intent = new Intent(SearchingActivity.this, MainActivity.class);
+
+    //변경 시작
+
                 tv = (String)parentView.getAdapter().getItem(position);
                 String[] TV = tv.split(" ");
+
+
+    //변경 끝
+
+
+
+
                 Toast.makeText(getApplicationContext(), tv + "의 정보를 불러옵니다.", Toast.LENGTH_SHORT).show();
 
                 intent.putExtra("sido",TV[0]);
